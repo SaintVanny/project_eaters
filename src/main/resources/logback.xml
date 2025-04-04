@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--
+        Аппендер для вывода логов в консоль.
+        Логирует только INFO и выше (INFO, WARN, ERROR).
+    -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+        Аппендер для записи логов в файл.
+        Логирует только DEBUG и ERROR.
+    -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/Cloud.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+        Главный логгер приложения.
+        - В консоль идут INFO и выше.
+    -->
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!--
+        Отдельный логгер для файлового логирования.
+        - Логирует только DEBUG и ERROR (без INFO и WARN).
+        - additivity="false" отключает передачу логов в консоль.
+    -->
+    <logger name="com.vanna" level="info" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger name="com.vanna" level="debug" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger name="com.vanna" level="error" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+</configuration>
