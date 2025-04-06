@@ -37,45 +37,8 @@ public class UserService {
         if (user.getUsername().trim().isEmpty()) {
             throw new IllegalArgumentException("Username must not be empty or blank");
         }
-//        User user = userMapper.toEntity(user);
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
-//        User savedUser = userRepository.save(user);
-//        String token = jwtUtil.generateToken(savedUser.getUsername());
-
-//        return new UserResponseDTO(token,savedUser.getUsername());
-
         return save(user);
     }
-
-//    @Transactional
-//    public UserResponseDTO login(LoginDTO loginDTO) {
-//        User user = userRepository.findByUsername(loginDTO.getUsername())
-//                .orElseThrow(() -> new RuntimeException("User not found"));
-//
-//        if (!passwordEncoder.matches(loginDTO.getPassword(), user.getPassword())) {
-//            throw new RuntimeException("Invalid password");
-//        }
-//        String token = jwtUtil.generateToken(user.getUsername());
-//
-//        return new UserResponseDTO(token,user.getUsername());
-//    }
-//
-//    @Transactional
-//    public void logout(String token) {
-//        log.info("Attempting to blacklist token: " + token);
-//
-//        if (blacklistedTokenRepository.existsByToken(token)) {
-//            throw new RuntimeException("Token is already blacklisted");
-//        }
-//        // Получаем дату истечения токена
-//        LocalDateTime expirationDate = jwtUtil.getExpirationDate(token);
-//        log.info("Token expiration date: " + expirationDate);
-//
-//        // Добавляем токен в черный список
-//        blacklistedTokenRepository.save(new BlacklistedToken(token, expirationDate));
-//        log.info("Token added to blacklist successfully");
-//
-//    }
 
     public User getByUsername(String username) {
         return userRepository.findByUsername(username)
