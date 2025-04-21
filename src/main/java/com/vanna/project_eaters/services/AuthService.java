@@ -24,6 +24,8 @@ public class AuthService {
                 .username(request.getUsername())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.ROLE_USER)
+                .age(request.getAge())
+                .email(request.getEmail())
                 .build();
         userService.createUser(user);
 
