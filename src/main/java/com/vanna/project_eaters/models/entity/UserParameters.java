@@ -1,5 +1,6 @@
 package com.vanna.project_eaters.models.entity;
 
+import com.vanna.project_eaters.models.enums.Gender;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
