@@ -1,9 +1,7 @@
 package com.vanna.project_eaters.models.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.vanna.project_eaters.models.enums.ComponentType;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,5 +15,8 @@ public class Component {
 
     private String name;
     private String unit; // г, мг и т. п.
+    @Enumerated(EnumType.STRING)
+    private ComponentType type;
+
 }
 

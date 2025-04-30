@@ -1,4 +1,4 @@
-package com.vanna.project_eaters.models.entity;
+package com.vanna.project_eaters.models.entity.authEntity;
 
 import com.vanna.project_eaters.models.enums.Role;
 import jakarta.persistence.*;

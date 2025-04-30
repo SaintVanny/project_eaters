@@ -1,6 +1,6 @@
-package com.vanna.project_eaters.services;
+package com.vanna.project_eaters.service;
 
-import com.vanna.project_eaters.models.entity.User;
+import com.vanna.project_eaters.models.entity.authEntity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

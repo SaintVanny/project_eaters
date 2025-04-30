@@ -1,10 +1,10 @@
-package com.vanna.project_eaters.services;
+package com.vanna.project_eaters.service;
 
 import com.vanna.project_eaters.exceptions.UsernameAlreadyExistsException;
 //import com.vanna.project_eater_.mapper.UserMapper;
 import com.vanna.project_eaters.models.enums.Role;
-import com.vanna.project_eaters.models.entity.User;
-import com.vanna.project_eaters.repositories.UserRepository;
+import com.vanna.project_eaters.models.entity.authEntity.User;
+import com.vanna.project_eaters.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.context.SecurityContextHolder;

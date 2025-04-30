@@ -1,10 +1,10 @@
-package com.vanna.project_eaters.services;
+package com.vanna.project_eaters.service;
 
-import com.vanna.project_eaters.dto.JwtAuthenticationResponse;
-import com.vanna.project_eaters.dto.SignInRequest;
-import com.vanna.project_eaters.dto.SignUpRequest;
+import com.vanna.project_eaters.dto.authDto.JwtAuthenticationResponse;
+import com.vanna.project_eaters.dto.authDto.SignInRequest;
+import com.vanna.project_eaters.dto.authDto.SignUpRequest;
 import com.vanna.project_eaters.models.enums.Role;
-import com.vanna.project_eaters.models.entity.User;
+import com.vanna.project_eaters.models.entity.authEntity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

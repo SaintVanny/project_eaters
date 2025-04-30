@@ -1,12 +1,8 @@
-package com.vanna.project_eaters.repositories;
+package com.vanna.project_eaters.repository;
 
-import com.vanna.project_eaters.models.entity.Component;
-import com.vanna.project_eaters.models.entity.Product;
 import com.vanna.project_eaters.models.entity.UserParameters;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
 
 @Repository
 public interface UserParametersRepository extends JpaRepository<UserParameters, Long> {

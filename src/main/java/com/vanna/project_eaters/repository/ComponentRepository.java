@@ -1,4 +1,4 @@
-package com.vanna.project_eaters.repositories;
+package com.vanna.project_eaters.repository;
 
 import com.vanna.project_eaters.models.entity.Component;
 import org.springframework.data.jpa.repository.JpaRepository;

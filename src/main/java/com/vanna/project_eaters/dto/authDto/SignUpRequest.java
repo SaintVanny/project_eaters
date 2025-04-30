@@ -1,4 +1,4 @@
-package com.vanna.project_eaters.dto;
+package com.vanna.project_eaters.dto.authDto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;

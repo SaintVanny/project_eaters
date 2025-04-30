@@ -1,4 +1,4 @@
-package com.vanna.project_eaters.utils;
+package com.vanna.project_eaters.util;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

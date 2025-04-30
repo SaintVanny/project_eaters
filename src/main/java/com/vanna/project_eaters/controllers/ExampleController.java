@@ -1,6 +1,6 @@
 package com.vanna.project_eaters.controllers;
 
-import com.vanna.project_eaters.services.UserService;
+import com.vanna.project_eaters.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
