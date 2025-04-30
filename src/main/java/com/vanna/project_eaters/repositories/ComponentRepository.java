@@ -1,14 +1,12 @@
 package com.vanna.project_eaters.repositories;
 
 import com.vanna.project_eaters.models.entity.Component;
-import com.vanna.project_eaters.models.entity.Product;
-import com.vanna.project_eaters.models.entity.UserParameters;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface UserParametersRepository extends JpaRepository<UserParameters, Long> {
+public interface ComponentRepository extends JpaRepository<Component, Long> {
+    Optional<Component> findByName(String name);
 }
-
