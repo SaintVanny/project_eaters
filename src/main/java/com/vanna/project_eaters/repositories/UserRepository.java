@@ -1,6 +1,6 @@
 package com.vanna.project_eaters.repositories;
 
-import com.vanna.project_eaters.models.User;
+import com.vanna.project_eaters.models.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

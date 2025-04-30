@@ -1,5 +1,6 @@
-package com.vanna.project_eaters.models;
+package com.vanna.project_eaters.models.entity;
 
+import com.vanna.project_eaters.models.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

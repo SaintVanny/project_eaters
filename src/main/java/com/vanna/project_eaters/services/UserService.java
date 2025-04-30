@@ -2,8 +2,8 @@ package com.vanna.project_eaters.services;
 
 import com.vanna.project_eaters.exceptions.UsernameAlreadyExistsException;
 //import com.vanna.project_eater_.mapper.UserMapper;
-import com.vanna.project_eaters.models.Role;
-import com.vanna.project_eaters.models.User;
+import com.vanna.project_eaters.models.enums.Role;
+import com.vanna.project_eaters.models.entity.User;
 import com.vanna.project_eaters.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
