@@ -3,7 +3,7 @@ package com.vanna.project_eaters.controllers;
 import com.vanna.project_eaters.dto.authDto.JwtAuthenticationResponse;
 import com.vanna.project_eaters.dto.authDto.SignInRequest;
 import com.vanna.project_eaters.dto.authDto.SignUpRequest;
-import com.vanna.project_eaters.service.AuthService;
+import com.vanna.project_eaters.service.authService.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

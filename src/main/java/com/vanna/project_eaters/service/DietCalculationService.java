@@ -1,7 +1,10 @@
 package com.vanna.project_eaters.service;
 
 import com.vanna.project_eaters.dto.DietPlan;
+import com.vanna.project_eaters.dto.dietDto.DietPlanDto;
 import com.vanna.project_eaters.dto.SelectedProduct;
+import com.vanna.project_eaters.dto.dietDto.SelectedProductDto;
+import com.vanna.project_eaters.mapper.ProductMapper;
 import com.vanna.project_eaters.models.entity.*;
 import com.vanna.project_eaters.models.enums.ComponentType;
 import com.vanna.project_eaters.models.enums.Gender;
@@ -26,16 +29,22 @@ public class DietCalculationService {
     /**
      * Главный метод: получает список продуктов, болезни пользователя и параметры
      */
-    public DietPlan calculateDiet(UserParameters parameters, List<Disease> diseases) {
+    public DietPlanDto calculateDiet(UserParameters parameters, List<Disease> diseases) {
         double dailyCalories = calculateCalories(parameters);
         List<Rule> rules = collectRules(diseases);
 
         List<Product> allProducts = productRepository.findAll();
-
         List<Product> allowedProducts = filterProducts(allProducts, rules);
 
-        // На этом этапе можно построить рацион
-        return buildDietPlan(allowedProducts, dailyCalories, rules);
+        DietPlan plan = buildDietPlan(allowedProducts, dailyCalories, rules); // <-- внутренний план
+
+        List<SelectedProductDto> dtoList = plan.getSelectedProducts().stream()
+                .map(sp -> new SelectedProductDto(
+                        ProductMapper.toDto(sp.getProduct()),
+                        sp.getPortionGrams()))
+                .collect(Collectors.toList());
+
+        return new DietPlanDto(dtoList, plan.getTotalCalories());
     }
 
     /**
@@ -43,7 +52,7 @@ public class DietCalculationService {
      */
     private double calculateCalories(UserParameters p) {
         if (p.getGender() == Gender.MALE) {
-            return 10 * p.getWeight() + 6.25 * p.getHeight() - 5 * p.getAge() + 5;
+            return (10 * p.getWeight()) + (6.25 * p.getHeight()) - (5 * p.getAge()) + 5;
         } else {
             return 10 * p.getWeight() + 6.25 * p.getHeight() - 5 * p.getAge() - 161;
         }

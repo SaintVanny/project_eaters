@@ -1,6 +1,6 @@
 package com.vanna.project_eaters.config;
 
-import com.vanna.project_eaters.service.UserService;
+import com.vanna.project_eaters.service.authService.UserService;
 import com.vanna.project_eaters.util.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

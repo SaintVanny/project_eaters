@@ -1,4 +1,4 @@
-package com.vanna.project_eaters.service;
+package com.vanna.project_eaters.service.authService;
 
 import com.vanna.project_eaters.dto.authDto.JwtAuthenticationResponse;
 import com.vanna.project_eaters.dto.authDto.SignInRequest;

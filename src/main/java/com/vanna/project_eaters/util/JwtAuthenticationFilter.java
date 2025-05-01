@@ -1,7 +1,7 @@
 package com.vanna.project_eaters.util;
 
-import com.vanna.project_eaters.service.JwtService;
-import com.vanna.project_eaters.service.UserService;
+import com.vanna.project_eaters.service.authService.JwtService;
+import com.vanna.project_eaters.service.authService.UserService;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

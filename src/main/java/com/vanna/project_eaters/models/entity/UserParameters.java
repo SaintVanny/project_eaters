@@ -2,11 +2,11 @@ package com.vanna.project_eaters.models.entity;
 
 import com.vanna.project_eaters.models.enums.Gender;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @Entity
 public class UserParameters {
     @Id
