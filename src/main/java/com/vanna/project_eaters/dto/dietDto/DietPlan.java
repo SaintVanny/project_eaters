@@ -1,4 +1,4 @@
-package com.vanna.project_eaters.dto;
+package com.vanna.project_eaters.dto.dietDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

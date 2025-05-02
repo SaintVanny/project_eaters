@@ -1,8 +1,8 @@
 package com.vanna.project_eaters.service;
 
-import com.vanna.project_eaters.dto.DietPlan;
+import com.vanna.project_eaters.dto.dietDto.DietPlan;
 import com.vanna.project_eaters.dto.dietDto.DietPlanDto;
-import com.vanna.project_eaters.dto.SelectedProduct;
+import com.vanna.project_eaters.dto.dietDto.SelectedProduct;
 import com.vanna.project_eaters.dto.dietDto.SelectedProductDto;
 import com.vanna.project_eaters.mapper.ProductMapper;
 import com.vanna.project_eaters.models.entity.*;
