@@ -39,7 +39,6 @@ public class DietController {
         diseases.forEach(disease -> System.out.println("Disease ID: " + disease.getId()));
 
         // добавим пользовательские правила вручную в список правил
-        //TODO в CustomRules id = null надо исправить, пока json без custom rules
         if (request.getCustomRules() != null && !request.getCustomRules().isEmpty()) {
             Disease custom = new Disease(); // фиктивная болезнь с именем "custom"
             custom.setRules(ruleMapper.toEntityList(request.getCustomRules()));
